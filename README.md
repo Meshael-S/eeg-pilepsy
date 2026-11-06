@@ -1,9 +1,9 @@
 # eeg-pilepsy
-# KAAUH adult EEG dataset: code
+# EEG dataset: code
 
 Code accompanying the Data Descriptor *[paper title]* ([journal, year], [DOI]).
 
-The dataset contains 70 adult scalp EEG recordings (Cadwell Arc, 250 Hz, 19 channels, 10–20 system, about 36 h in total) from King Abdullah bin Abdulaziz University Hospital, Riyadh. Each recording is a band-pass filtered (0.5–40 Hz) MNE-Python FIF file with expert annotations of four classes: **A** normal, **B** slowing, **C** epileptiform discharges, **D** electrographic seizure. The recordings are also provided as 1 s labelled windows.
+The dataset contains 70 adult scalp EEG recordings (Cadwell Arc, 250 Hz, 19 channels, 10–20 system, about 36 h in total) from University Hospital, Riyadh. Each recording is a band-pass filtered (0.5–40 Hz) MNE-Python FIF file with expert annotations of four classes: **A** normal, **B** slowing, **C** epileptiform discharges, **D** electrographic seizure. The recordings are also provided as 1 s labelled windows.
 
 The data are **not** stored in this repository. They are available at [repository name, DOI/URL] under [licence].
 
