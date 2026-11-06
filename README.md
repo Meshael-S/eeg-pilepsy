@@ -71,6 +71,7 @@ Codes combine a class letter and a number, for example `C5` or `D1`. A trailing 
 
 The study was approved by the Institutional Review Board of King Abdullah bin Abdulaziz University Hospital (HA-01-R-104, Log 26-0043). Recordings were de-identified before release.
 
-## Contact
+## Citation
 
-[Name, e-mail]. Please open an issue for questions about the code or the files.
+Alharbi N, Aldayel M, Alsenan S, Alyami R, Almowalad E, Alkethiry E. From Annotation to Prediction: Hospital-Grade Early Seizure Risk Prediction from Adult EEG. Diagnostics. 2026; 16(3):492. https://doi.org/10.3390/diagnostics16030492
+
