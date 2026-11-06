@@ -73,5 +73,7 @@ The study was approved by the Institutional Review Board of King Abdullah bin Ab
 
 ## Citation
 
+https://doi.org/10.5281/zenodo.24024329
+
 Alharbi N, Aldayel M, Alsenan S, Alyami R, Almowalad E, Alkethiry E. From Annotation to Prediction: Hospital-Grade Early Seizure Risk Prediction from Adult EEG. Diagnostics. 2026; 16(3):492. https://doi.org/10.3390/diagnostics16030492
 
