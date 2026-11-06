@@ -1,4 +1,3 @@
-# eeg-pilepsy
 # EEG dataset for epilepsy research
 
 
