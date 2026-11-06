@@ -1,32 +1,18 @@
 # eeg-pilepsy
 # EEG dataset: code
 
-Code accompanying the Data Descriptor *[paper title]* ([journal, year], [DOI]).
 
 The dataset contains 70 adult scalp EEG recordings (Cadwell Arc, 250 Hz, 19 channels, 10–20 system, about 36 h in total) from University Hospital, Riyadh. Each recording is a band-pass filtered (0.5–40 Hz) MNE-Python FIF file with expert annotations of four classes: **A** normal, **B** slowing, **C** epileptiform discharges, **D** electrographic seizure. The recordings are also provided as 1 s labelled windows.
 
-The data are **not** stored in this repository. They are available at [repository name, DOI/URL] under [licence].
 
 ## Contents
 
 | File | Purpose |
 |---|---|
 | `read_dataset.ipynb` | Reads the FIF recordings, the annotation workbook and the 1 s windows; plots examples; makes a split by recording |
-| `clean_annotations.py` | Converts the annotations exported from the clinical software into the cleaned events released with the data (pairs start/end markers, standardises codes, resolves overlapping state events, writes a QC summary) |
-| `make_windows.py` | Cuts the recordings into labelled 1 s windows (`eeg_dataset.npz`) |
 | `requirements.txt` | Python packages |
 
-[Rename the rows to match the files you upload.]
-
-## Installation
-
-```bash
-git clone [repository URL]
-cd [repository]
-pip install -r requirements.txt
-```
-
-Tested with Python [version] and MNE-Python 1.13.2. Suggested `requirements.txt`:
+Tested with MNE-Python 1.13.2. Suggested `requirements.txt`:
 
 ```
 mne>=1.13
@@ -63,7 +49,7 @@ Signals are in volts. Annotation times are in the time base of the FIF file.
 ├── annotations/EEG_annotations.xlsx           annotation workbook
 └── windows/
     ├── eeg_dataset.npz                        1 s windows
-    └── recording_index.tsv                    recording_id and recording name
+    └── recording_index.tsv                    recording_id 
 ```
 
 `eeg_dataset.npz` holds `X` (windows × 19 × 250, volts), `y` (class A–D), `recording_id`, `start_s` and `win_mode` (`train` or `test`).
@@ -72,14 +58,6 @@ Signals are in volts. Annotation times are in the time base of the FIF file.
 
 Codes combine a class letter and a number, for example `C5` or `D1`. A trailing number of 1 means generalised, and even and odd numbers within classes B–D mean right and left. An event covering several regions has several codes separated by commas (`C5,C7,C9`). The full list is in the `Codes` sheet of the workbook.
 
-## Reproducing the released annotations
-
-```python
-# raws: list of mne Raw objects loaded from the unprocessed exports; Filenames: their names
-from clean_annotations import *      # produces cleaned_raws, qc, qc_summary.txt, qc_summary.json
-```
-
-[Replace with the exact command you use. Say whether the unprocessed exports are part of the release.]
 
 ## Using the data
 
@@ -88,25 +66,6 @@ from clean_annotations import *      # produces cleaned_raws, qc, qc_summary.txt
 - Class frequencies are not clinical prevalence; recordings were selected.
 - The `train` windows include augmented class C windows. Evaluate on `test` windows only.
 
-## Citation
-
-If you use the data or code, please cite:
-
-> [Authors]. [Title]. [Journal] [year]; [volume]: [pages]. [DOI]
-
-```bibtex
-@article{[key],
-  title   = {[title]},
-  author  = {[authors]},
-  journal = {[journal]},
-  year    = {[year]},
-  doi     = {[doi]}
-}
-```
-
-## Licence
-
-Code: [MIT / Apache-2.0]. Data: [licence stated in the repository]. 
 
 ## Ethics
 
