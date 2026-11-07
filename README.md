@@ -66,10 +66,6 @@ Codes combine a class letter and a number, for example `C5` or `D1`. A trailing 
 - The `train` windows include augmented class C windows. Evaluate on `test` windows only.
 
 
-## Ethics
-
-The study was approved by the Institutional Review Board of King Abdullah bin Abdulaziz University Hospital (HA-01-R-104, Log 26-0043). Recordings were de-identified before release.
-
 ## Citation
 
 https://doi.org/10.5281/zenodo.24024329
